@@ -40,7 +40,7 @@ export default function Navbar() {
             <img
               src="/logo.png"
               alt="TaxSafar Logo"
-              className="w-9 h-9 rounded-lg object-cover mix-blend-screen"
+              style={{ width: "36px", height: "36px", objectFit: "cover", borderRadius: "8px", mixBlendMode: "screen" }}
             />
             <span>
               Tax<span className="text-[#00ff88]">Safar</span>

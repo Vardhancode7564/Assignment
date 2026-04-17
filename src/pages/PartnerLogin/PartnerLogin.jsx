@@ -73,7 +73,7 @@ export default function PartnerLogin() {
             <img
               src="/logo.png"
               alt="TaxSafar Logo"
-              className={styles.logoImg}
+              style={{ width: "44px", height: "44px", objectFit: "cover", borderRadius: "12px", mixBlendMode: "screen" }}
             />
             Tax<span className="text-[#00ff88]">Safar</span>
           </Link>

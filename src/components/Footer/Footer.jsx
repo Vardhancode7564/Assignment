@@ -58,7 +58,7 @@ export default function Footer() {
               <img
                 src="/logo.png"
                 alt="TaxSafar Logo"
-                className={styles.logoImg}
+                style={{ width: "32px", height: "32px", objectFit: "cover", borderRadius: "8px", mixBlendMode: "screen" }}
               />
               <span>
                 Tax<span className="text-[#00ff88]">Safar</span>
@@ -188,8 +188,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className={styles.bottomBar}>
           <p className={styles.copyright}>
-            © {new Date().getFullYear()} TaxSafar (Swilesure Pvt. Ltd.). All
-            rights reserved.
+            © {new Date().getFullYear()} TaxSafar. All rights reserved.
           </p>
           <div className={styles.legalLinks}>
             <a

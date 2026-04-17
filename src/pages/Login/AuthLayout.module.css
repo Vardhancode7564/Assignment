@@ -37,7 +37,7 @@
 }
 
 .logo {
-  @apply flex items-center gap-2 font-extrabold text-2xl mb-8 relative z-10;
+  @apply flex items-center justify-center gap-3 font-extrabold text-2xl mb-6 relative z-10;
 }
 
 .logoImg {
