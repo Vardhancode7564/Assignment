@@ -317,7 +317,7 @@ export default function Signup() {
           <div className={styles.socialGrid}>
             {[
               [GoogleIcon, "Google"],
-              [FbIcon, "Facebook"],
+              [AppleIcon, "Apple"],
             ].map(([Icon, label]) => (
               <button
                 key={label}
