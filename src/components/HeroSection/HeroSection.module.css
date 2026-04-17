@@ -1,0 +1,57 @@
+@reference "tailwindcss";
+
+.section {
+  @apply relative min-h-[100vh] flex flex-col justify-center overflow-hidden pt-36 pb-20;
+}
+
+.bgBlob1 {
+  @apply absolute w-[600px] h-[600px] rounded-full top-[-15%] right-[-8%] opacity-20 pointer-events-none;
+}
+
+.bgBlob2 {
+  @apply absolute w-[400px] h-[400px] rounded-full bottom-[-10%] left-[-5%] opacity-15 pointer-events-none;
+}
+
+.gridOverlay {
+  @apply absolute inset-0 pointer-events-none;
+}
+
+.container {
+  @apply relative z-10 max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center;
+}
+
+.leftColumn {
+  @apply flex flex-col gap-8;
+}
+
+.heading {
+  @apply font-extrabold text-5xl lg:text-6xl xl:text-7xl leading-[1.08] text-white;
+}
+
+.subheading {
+  @apply text-gray-400 text-lg leading-relaxed max-w-xl;
+}
+
+.buttonGroup {
+  @apply flex flex-wrap gap-4;
+}
+
+.popularTags {
+  @apply flex flex-wrap items-center gap-3;
+}
+
+.tag {
+  @apply px-3 py-1.5 text-xs rounded-full border border-white/10 text-gray-400 hover:border-[#00ff88] hover:text-[#00ff88] transition-all duration-200;
+}
+
+.rightColumn {
+  @apply grid grid-cols-2 gap-4;
+}
+
+.statCard {
+  @apply p-6 rounded-2xl border border-white/[0.07] bg-white/[0.03] backdrop-blur-sm hover:border-[#00ff88]/30 hover:bg-white/[0.06] transition-all duration-300 cursor-default;
+}
+
+.scrollIndicator {
+  @apply absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-gray-600 text-xs hidden lg:flex;
+}

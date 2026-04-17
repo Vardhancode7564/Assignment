@@ -1,0 +1,89 @@
+@reference "tailwindcss";
+
+.footer {
+  @apply bg-[#050505] border-t border-white/[0.06];
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-6 pt-16 pb-0;
+}
+
+.grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/[0.06];
+}
+
+.brandColumn {
+  @apply flex flex-col gap-4 lg:col-span-1;
+}
+
+.logo {
+  @apply flex items-center gap-2 font-extrabold text-xl;
+}
+
+.logoImg {
+  @apply w-9 h-9 rounded-lg object-cover mix-blend-screen;
+}
+
+.description {
+  @apply text-sm text-gray-500 leading-relaxed;
+}
+
+.contactInfo {
+  @apply flex flex-col gap-2;
+}
+
+.contactLink {
+  @apply flex items-center gap-2 text-sm text-gray-500 hover:text-[#00ff88] transition-colors duration-200;
+}
+
+.contactText {
+  @apply flex items-center gap-2 text-sm text-gray-500;
+}
+
+.socialIcons {
+  @apply flex gap-2 mt-1;
+}
+
+.socialIcon {
+  @apply w-8 h-8 rounded-lg border border-white/10 flex items-center justify-center text-gray-500 hover:border-[#00ff88]/40 hover:text-[#00ff88] transition-all duration-200;
+}
+
+.columnTitle {
+  @apply text-xs font-bold uppercase tracking-widest text-gray-400 mb-4;
+}
+
+.linkGroup {
+  @apply flex flex-col gap-2.5;
+}
+
+.linkItem {
+  @apply text-sm text-gray-500 hover:text-[#00ff88] transition-colors duration-200 hover:pl-1 transition-all;
+}
+
+.form {
+  @apply flex gap-2;
+}
+
+.input {
+  @apply flex-1 px-3 py-2 bg-white/[0.04] border border-white/10 rounded-lg text-sm text-white placeholder-gray-600 focus:border-[#00ff88]/40 focus:outline-none transition-colors duration-200;
+}
+
+.submitBtn {
+  @apply px-3 py-2 bg-[#00ff88] text-black text-xs font-bold rounded-lg hover:bg-[#00e07a] hover:shadow-[0_0_20px_rgba(0,255,136,0.3)] transition-all duration-200;
+}
+
+.bottomBar {
+  @apply flex flex-col sm:flex-row items-center justify-between gap-4 py-6;
+}
+
+.copyright {
+  @apply text-sm text-gray-600;
+}
+
+.legalLinks {
+  @apply flex gap-6;
+}
+
+.legalLink {
+  @apply text-sm text-gray-600 hover:text-[#00ff88] transition-colors duration-200;
+}

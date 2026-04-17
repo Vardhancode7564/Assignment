@@ -1,0 +1,46 @@
+@reference "tailwindcss";
+
+.section {
+  @apply py-28;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-6;
+}
+
+.header {
+  @apply text-center mb-16;
+}
+
+.grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-8 relative;
+}
+
+.connector {
+  @apply hidden md:block absolute top-12 left-[20%] right-[20%] h-[1px];
+}
+
+.step {
+  @apply flex flex-col items-center text-center relative z-10;
+}
+
+.iconContainer {
+  @apply relative mb-6;
+}
+
+.iconCircle {
+  @apply w-24 h-24 rounded-full border border-white/[0.08] bg-[#0a0a0a] flex items-center justify-center text-4xl
+    hover:border-[#00ff88]/40 hover:shadow-[0_0_32px_rgba(0,255,136,0.12)] transition-all duration-300;
+}
+
+.stepBadge {
+  @apply absolute -top-1 -right-1 w-7 h-7 rounded-full bg-[#00ff88] text-black text-xs font-black flex items-center justify-center;
+}
+
+.stepTitle {
+  @apply font-bold text-xl text-white mb-2;
+}
+
+.stepDesc {
+  @apply text-sm text-gray-400 leading-relaxed max-w-60;
+}

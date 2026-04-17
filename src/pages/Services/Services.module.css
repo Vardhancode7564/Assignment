@@ -1,0 +1,65 @@
+@reference "tailwindcss";
+
+.heroSection {
+  @apply pt-32 pb-12 text-center relative overflow-hidden;
+}
+
+.heroBlob {
+  @apply absolute top-0 right-0 w-96 h-96 rounded-full opacity-10 pointer-events-none;
+}
+
+.heroContainer {
+  @apply max-w-7xl mx-auto px-6 relative z-10;
+}
+
+.servicesSection {
+  @apply pb-28;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-6;
+}
+
+.grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}
+
+.serviceCard {
+  @apply p-7 rounded-2xl border border-white/[0.07] bg-white/[0.02] hover:border-[#00ff88]/25 hover:bg-white/[0.04] transition-all duration-300;
+}
+
+.serviceRow {
+  @apply flex items-start gap-5;
+}
+
+.serviceIcon {
+  @apply w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0;
+}
+
+.serviceContent {
+  @apply flex-1;
+}
+
+.serviceTitle {
+  @apply font-bold text-xl text-white mb-1;
+}
+
+.serviceTagline {
+  @apply text-xs text-gray-500 mb-3;
+}
+
+.serviceDesc {
+  @apply text-sm text-gray-400 leading-relaxed mb-4;
+}
+
+.featureList {
+  @apply flex flex-col gap-2;
+}
+
+.featureItem {
+  @apply flex items-start gap-2 text-sm text-gray-400;
+}
+
+.checkIcon {
+  @apply mt-0.5 flex-shrink-0;
+}

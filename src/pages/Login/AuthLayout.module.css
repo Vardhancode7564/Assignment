@@ -1,0 +1,113 @@
+@reference "tailwindcss";
+
+.container {
+  @apply min-h-screen bg-black flex items-center justify-center px-4 py-8 relative overflow-hidden;
+}
+
+.bgBlobs {
+  @apply absolute inset-0 pointer-events-none;
+}
+
+.blob1 {
+  @apply absolute w-96 h-96 top-[-15%] right-[-8%] rounded-full opacity-15;
+}
+
+.blob2 {
+  @apply absolute w-72 h-72 bottom-[-10%] left-[-5%] rounded-full opacity-10;
+}
+
+.gridOverlay {
+  @apply absolute inset-0;
+}
+
+.panelContent {
+  @apply relative z-10 w-full max-w-4xl grid grid-cols-1 lg:grid-cols-2 rounded-3xl overflow-hidden border border-white/[0.08] shadow-2xl;
+}
+
+.leftSidebar {
+  @apply hidden lg:flex flex-col items-center justify-center p-12 relative overflow-hidden;
+}
+
+.sidebarBlob {
+  @apply absolute -top-16 -right-10 w-52 h-52 rounded-full opacity-30;
+}
+
+.sidebarBlobSignup {
+  @apply absolute -top-12 -right-8 w-48 h-48 rounded-full opacity-30;
+}
+
+.logo {
+  @apply flex items-center gap-2 font-extrabold text-2xl mb-8 relative z-10;
+}
+
+.logoImg {
+  @apply w-10 h-10 rounded-xl object-cover mix-blend-screen;
+}
+
+.heading {
+  @apply text-3xl font-bold text-white text-center mb-3 relative z-10;
+}
+
+.subheading {
+  @apply text-gray-400 text-sm text-center max-w-xs relative z-10;
+}
+
+.rightForm {
+  @apply p-8 lg:p-12 bg-[#060606] flex flex-col justify-center;
+}
+
+.formHeader {
+  @apply mb-8;
+}
+
+.formTitle {
+  @apply text-2xl font-bold text-white mb-1;
+}
+
+.formDesc {
+  @apply text-sm text-gray-500;
+}
+
+.formLink {
+  @apply text-[#00ff88] font-medium hover:underline;
+}
+
+.form {
+  @apply flex flex-col gap-5;
+}
+
+.label {
+  @apply block text-xs font-medium text-gray-400 mb-1.5;
+}
+
+.inputWrapper {
+  @apply relative;
+}
+
+.toggleBtn {
+  @apply absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-300 transition-colors;
+}
+
+.actionRow {
+  @apply flex items-center justify-between;
+}
+
+.divider {
+  @apply flex items-center gap-3 my-6;
+}
+
+.dividerLine {
+  @apply flex-1 h-px bg-white/[0.07];
+}
+
+.dividerText {
+  @apply text-xs text-gray-600 uppercase tracking-wider;
+}
+
+.socialGrid {
+  @apply grid grid-cols-2 gap-3;
+}
+
+.socialBtn {
+  @apply flex items-center justify-center gap-2 py-3 px-4 bg-white/[0.04] border border-white/10 rounded-xl text-sm text-gray-400 font-medium hover:bg-white/[0.08] hover:text-white transition-all duration-200;
+}

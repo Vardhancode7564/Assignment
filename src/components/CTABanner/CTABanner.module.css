@@ -1,0 +1,37 @@
+@reference "tailwindcss";
+
+.section {
+  @apply py-28;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-6;
+}
+
+.bannerCard {
+  @apply relative rounded-3xl p-14 text-center overflow-hidden border border-[#00ff88]/20;
+}
+
+.blob1 {
+  @apply absolute -top-20 -right-16 w-64 h-64 rounded-full opacity-20 pointer-events-none;
+}
+
+.blob2 {
+  @apply absolute -bottom-12 -left-12 w-48 h-48 rounded-full opacity-15 pointer-events-none;
+}
+
+.contentWrapper {
+  @apply relative z-10;
+}
+
+.heading {
+  @apply font-extrabold text-4xl lg:text-5xl text-white mb-4;
+}
+
+.subheading {
+  @apply text-gray-400 text-lg mb-8 max-w-xl mx-auto;
+}
+
+.buttonGroup {
+  @apply flex flex-wrap justify-center gap-4;
+}

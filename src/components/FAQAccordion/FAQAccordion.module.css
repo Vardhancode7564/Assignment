@@ -1,0 +1,49 @@
+@reference "tailwindcss";
+
+.section {
+  @apply py-28;
+}
+
+.container {
+  @apply max-w-3xl mx-auto px-6;
+}
+
+.header {
+  @apply text-center mb-16;
+}
+
+.list {
+  @apply flex flex-col gap-3;
+}
+
+.item {
+  @apply rounded-xl border transition-all duration-300 overflow-hidden;
+}
+
+.itemOpen {
+  @apply border-[#00ff88]/30 bg-white/[0.04];
+}
+
+.itemClosed {
+  @apply border-white/[0.07] bg-white/[0.02];
+}
+
+.trigger {
+  @apply w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-white hover:text-[#00ff88] transition-colors duration-200;
+}
+
+.toggleIcon {
+  @apply w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-200;
+}
+
+.toggleIconOpen {
+  @apply bg-[#00ff88] text-black;
+}
+
+.toggleIconClosed {
+  @apply bg-white/[0.08] text-gray-400;
+}
+
+.answer {
+  @apply px-6 pb-5 text-sm text-gray-400 leading-relaxed;
+}

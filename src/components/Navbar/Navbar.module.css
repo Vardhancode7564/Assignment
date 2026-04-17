@@ -1,0 +1,29 @@
+@reference "tailwindcss";
+
+.navbar {
+  @apply fixed top-0 left-0 right-0 z-[100] transition-all duration-300;
+}
+
+.scrolled {
+  @apply bg-black/90 backdrop-blur-xl border-b border-white/[0.07] py-3;
+}
+
+.notScrolled {
+  @apply py-5;
+}
+
+.container {
+  @apply flex items-center justify-between mx-auto px-6 w-full max-w-7xl;
+}
+
+.logo {
+  @apply flex items-center gap-2 font-extrabold text-xl z-20;
+}
+
+.desktopNav {
+  @apply hidden lg:flex items-center justify-center gap-8 flex-1;
+}
+
+.authButtons {
+  @apply hidden lg:flex items-center justify-end gap-3 w-64 z-20;
+}

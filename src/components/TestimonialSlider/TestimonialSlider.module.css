@@ -1,0 +1,53 @@
+@reference "tailwindcss";
+
+.section {
+  @apply py-28;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-6;
+}
+
+.header {
+  @apply text-center mb-16;
+}
+
+.cardWrapper {
+  @apply max-w-2xl mx-auto;
+}
+
+.card {
+  @apply p-8 rounded-2xl border border-white/[0.07] bg-white/[0.03] text-center relative;
+}
+
+.quoteDecor {
+  @apply absolute top-6 left-8 text-6xl text-[#00ff88]/20 font-serif leading-none select-none;
+}
+
+.stars {
+  @apply flex justify-center gap-1 mb-5;
+}
+
+.quoteText {
+  @apply text-gray-300 text-lg leading-relaxed mb-6 italic relative z-10;
+}
+
+.authorName {
+  @apply font-semibold text-white;
+}
+
+.authorRole {
+  @apply text-sm text-gray-500 mt-0.5;
+}
+
+.controls {
+  @apply flex items-center justify-center gap-5 mt-6;
+}
+
+.navBtn {
+  @apply w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:border-[#00ff88]/40 hover:text-[#00ff88] transition-all duration-200;
+}
+
+.dots {
+  @apply flex gap-2;
+}
