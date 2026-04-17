@@ -8,7 +8,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+
   const location = useLocation();
 
   useEffect(() => {
@@ -150,70 +150,75 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile overlay */}
+      {/* Mobile overlay — starts below navbar */}
       {mobileOpen && (
         <div
-          className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[90] lg:hidden"
+          className="fixed top-[64px] left-0 right-0 bottom-0 bg-black/60 backdrop-blur-sm z-[90] lg:hidden"
           onClick={() => setMobileOpen(false)}
         />
       )}
 
-      {/* Mobile drawer */}
+      {/* Mobile drawer — starts below navbar */}
       <div
         id="mobile-drawer"
-        className={`fixed top-0 right-0 h-full w-72 bg-[#0a0a0a] border-l border-white/[0.07] z-[95] lg:hidden
-          transition-transform duration-400 pt-20 px-6 pb-6 overflow-y-auto
+        className={`fixed top-[64px] right-0 h-[calc(100%-64px)] w-[280px] bg-[#0a0a0a] border-l border-white/[0.07] z-[95] lg:hidden
+          transition-transform duration-300 ease-in-out flex flex-col
           ${mobileOpen ? "translate-x-0" : "translate-x-full"}`}
       >
-        <div className="flex flex-col gap-1">
+        {/* Nav links */}
+        <div className="flex-1 overflow-y-auto px-4 pt-10 pb-5 flex flex-col gap-2">
+          {/* Section label */}
+          <p className="text-[10px] font-semibold text-gray-600 uppercase tracking-widest px-2 mb-4">
+            Menu
+          </p>
+
           {[
             { path: "/", label: "Home" },
             { path: "/about", label: "About Us" },
             { path: "/contact", label: "Contact" },
+            { path: "/services", label: "Services" },
           ].map(({ path, label }) => (
             <Link
               key={path}
               to={path}
-              className={`block py-3 text-base font-medium border-b border-white/[0.06] transition-colors
-                ${isActive(path) ? "text-[#00ff88]" : "text-gray-400 hover:text-white"}`}
+              className={`flex items-center px-4 py-3.5 rounded-xl text-sm font-medium transition-all duration-200
+                ${isActive(path)
+                  ? "text-[#00ff88] bg-[#00ff88]/[0.08] border border-[#00ff88]/20"
+                  : "text-gray-400 hover:text-white hover:bg-white/[0.05]"
+                }`}
             >
               {label}
             </Link>
           ))}
-          <div className="border-b border-white/[0.06]">
-            <button
-              className="flex items-center justify-between w-full py-3 text-base font-medium text-gray-400"
-              onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-            >
-              Services
-              <ChevronDown
-                size={16}
-                className={`transition-transform ${mobileServicesOpen ? "rotate-180" : ""}`}
-              />
-            </button>
-            {mobileServicesOpen && (
-              <div className="pl-3 pb-2 flex flex-col gap-1">
-                {services.map((s) => (
-                  <Link
-                    key={s.id}
-                    to="/services"
-                    className="text-sm text-gray-500 hover:text-[#00ff88] py-1.5 transition-colors"
-                  >
-                    {s.title}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
         </div>
-        <div className="flex flex-col gap-3 mt-6">
-          <Link to="/login" className="btn-secondary !justify-center">
+
+        {/* Auth buttons */}
+        <div className="shrink-0 px-4 pt-4 pb-6 border-t border-white/[0.07] flex flex-col gap-2">
+          <p className="text-[10px] font-semibold text-gray-600 uppercase tracking-widest px-1 mb-1">
+            Account
+          </p>
+          <Link
+            to="/login"
+            className="flex items-center justify-center w-full py-2.5 rounded-xl text-sm font-medium
+              text-white border border-white/[0.12] hover:border-white/30 hover:bg-white/[0.05]
+              transition-all duration-200"
+          >
             Login
           </Link>
-          <Link to="/partner-login" className="btn-secondary !justify-center">
+          <Link
+            to="/partner-login"
+            className="flex items-center justify-center w-full py-2.5 rounded-xl text-sm font-medium
+              text-white border border-white/[0.12] hover:border-white/30 hover:bg-white/[0.05]
+              transition-all duration-200"
+          >
             Partner Login
           </Link>
-          <Link to="/signup" className="btn-primary !justify-center">
+          <Link
+            to="/signup"
+            className="flex items-center justify-center w-full py-2.5 rounded-xl text-sm font-bold
+              bg-[#00ff88] text-black hover:bg-[#00e07a] transition-all duration-200 mt-1"
+            style={{ boxShadow: "0 4px 20px rgba(0,255,136,0.25)" }}
+          >
             Register Now
           </Link>
         </div>
