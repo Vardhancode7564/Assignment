@@ -4,8 +4,7 @@ import { motion } from "framer-motion";
 import { Eye, EyeOff, Shield } from "lucide-react";
 import styles from "../Login/AuthLayout.module.css";
 
-const inputClass =
-  "w-full px-4 py-3 bg-[#0d0d0d] border border-white/10 rounded-xl text-white text-sm placeholder-gray-600 focus:border-[#00ff88]/50 focus:shadow-[0_0_0_3px_rgba(0,255,136,0.09)] outline-none transition-all duration-200";
+
 
 export default function PartnerLogin() {
   const [show, setShow] = useState(false);
@@ -122,7 +121,7 @@ export default function PartnerLogin() {
                 name="vendorId"
                 type="text"
                 placeholder="e.g., VND-12345"
-                className={inputClass}
+                className={styles.input}
                 value={form.vendorId}
                 onChange={(e) =>
                   setForm({ ...form, vendorId: e.target.value })
@@ -140,7 +139,7 @@ export default function PartnerLogin() {
                   name="password"
                   type={show ? "text" : "password"}
                   placeholder="••••••••"
-                  className={inputClass}
+                  className={styles.input}
                   value={form.password}
                   onChange={(e) =>
                     setForm({ ...form, password: e.target.value })

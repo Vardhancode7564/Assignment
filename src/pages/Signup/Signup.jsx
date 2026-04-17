@@ -30,8 +30,7 @@ const FbIcon = () => (
   </svg>
 );
 
-const inputClass =
-  "w-full px-4 py-3 bg-[#0d0d0d] border border-white/10 rounded-xl text-white text-sm placeholder-gray-600 focus:border-[#00ff88]/50 focus:shadow-[0_0_0_3px_rgba(0,255,136,0.09)] outline-none transition-all duration-200";
+
 
 export default function Signup() {
   const [show, setShow] = useState(false);
@@ -70,7 +69,7 @@ export default function Signup() {
     name,
     value: val,
     onChange,
-    className: `${inputClass} ${errors[name] ? "border-red-500/50" : ""}`,
+    className: `${styles.input} ${errors[name] ? styles.inputError : ""}`,
   });
 
   return (
@@ -183,7 +182,7 @@ export default function Signup() {
               <input
                 id="su-name"
                 type="text"
-                placeholder="John Doe"
+                placeholder="Harsha Vardhan"
                 {...field("name", form.name, (e) =>
                   setForm({ ...form, name: e.target.value }),
                 )}

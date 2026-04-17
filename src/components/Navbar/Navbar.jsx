@@ -118,6 +118,7 @@ export default function Navbar() {
             >
               Login
             </Link>
+            <span className="w-px h-4 bg-white/20 self-center" />
             <Link
               to="/partner-login"
               className="text-sm font-medium text-gray-400 hover:text-white px-4 py-2 rounded-lg hover:bg-white/[0.05] transition-all duration-200"
